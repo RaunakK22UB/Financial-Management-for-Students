@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Finance Management</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="mb-4">Student Finance Management</h1>
+        
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Expenses</h3>
+                <form id="expenseForm">
+                    <div class="form-group">
+                        <label for="expenseName">Expense Name:</label>
+                        <input type="text" class="form-control" id="expenseName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="expenseAmount">Expense Amount ($):</label>
+                        <input type="number" class="form-control" id="expenseAmount" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Add Expense</button>
+                </form>
+                <ul id="expenseList" class="list-group mt-3">
+                    <!-- Expense items will be added dynamically here -->
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <h3>Income</h3>
+                <form id="incomeForm">
+                    <div class="form-group">
+                        <label for="incomeName">Income Source:</label>
+                        <input type="text" class="form-control" id="incomeName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="incomeAmount">Income Amount ($):</label>
+                        <input type="number" class="form-control" id="incomeAmount" required>
+                    </div>
+                    <button type="submit" class="btn btn-success">Add Income</button>
+                </form>
+                <ul id="incomeList" class="list-group mt-3">
+                    <!-- Income items will be added dynamically here -->
+                </ul>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-md-6">
+                <h3>Financial Summary</h3>
+                <div id="financialSummary" class="card p-3">
+                    <p>Total Income: <span id="totalIncome">0</span></p>
+                    <p>Total Expenses: <span id="totalExpenses">0</span></p>
+                    <p>Remaining Balance: <span id="remainingBalance">0</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
